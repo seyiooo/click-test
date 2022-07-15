@@ -1,0 +1,70 @@
+@import 'css/reset.min.css';
+@import 'css/base.min.css';
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-color: var(--background-color-);
+    --background-color-: #2f3136;
+    --secondary-color: #19191b;
+}
+
+#title {
+    transform: translateX(-50%) translateY(-50%);
+    color: var(--secondary-color);
+    position: absolute;
+    font-size: 50px;
+    left: 50%;
+    top: 10%;
+}
+
+#score {
+    transform: translateX(-50%) translateY(-50%);
+    color: var(--secondary-color);
+    position: absolute;
+    font-size: 50px;
+    left: 50%;
+    top: 20%;
+}
+
+#click-zone {
+    transform: translateX(-50%) translateY(-50%);
+    box-shadow: 0 0 50px 15px rgba(0,0,0,.3);
+    background-color: var(--secondary-color);
+    color: var(--background-color-);
+    border-radius: 50px;
+    position: absolute;
+    padding: 5em 10em;
+    font-size: 30px;
+    cursor: pointer;
+    left: 50%;
+    top: 50%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#click-zone:hover {
+    transform: translateX(-50%) translateY(-50%) scale(1.1);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color-);
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+}

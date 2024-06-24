@@ -25,7 +25,25 @@ body {
     top: 10%;
 }
 
-#score {
+#time {
+    transform: translateX(-50%) translateY(-50%);
+    color: var(--secondary-color);
+    position: absolute;
+    font-size: 50px;
+    left: 43%;
+    top: 20%;
+}
+
+#clicks {
+    transform: translateX(-50%) translateY(-50%);
+    color: var(--secondary-color);
+    position: absolute;
+    font-size: 50px;
+    left: 55%;
+    top: 20%;
+}
+
+#result {
     transform: translateX(-50%) translateY(-50%);
     color: var(--secondary-color);
     position: absolute;

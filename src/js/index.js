@@ -3,7 +3,9 @@ let waiting = false;
 let clicks = 0;
 let time = 10;
 
-const score = document.getElementById('score');
+const timeElement = document.getElementById('time');
+const clicksElement = document.getElementById('clicks');
+const resultElement = document.getElementById('result');
 
 function start() {
     started = true;
@@ -16,10 +18,15 @@ function start() {
 
             clearInterval(interval);
 
-            score.innerText = `You made ${clicks * 6 / 60} CPS.`;
+            timeElement.innerText = '';
+            clicksElement.innerText = '';
+
+            resultElement.innerText = `${clicks * 6 / 60} CPS`;
 
             setTimeout(() => {
-                score.innerText = '10s | 0 Clicks';
+                timeElement.innerText = '10s';
+                clicksElement.innerText = '0 Clicks';
+                resultElement.innerText = '';
 
                 time = 10;
                 
@@ -32,7 +39,8 @@ function start() {
             return;
         };
 
-        score.innerText = `${time}s | ${clicks} Clicks`;
+        timeElement.innerText = `${time}s`;
+        clicksElement.innerText = `${clicks} Clicks`;
     }, 1000);
 };
 
@@ -44,6 +52,7 @@ click_zone.addEventListener('click', function () {
     if (!waiting) {
         ++clicks;
     
-        score.innerText = `${time}s | ${clicks} Clicks`;
+        timeElement.innerText = `${time}s`;
+        clicksElement.innerText = `${clicks} Clicks`;
     };
 });
